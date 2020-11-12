@@ -11,6 +11,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
+app.get("/", (req, res) => res.send("<h2> SUCCESS </h2>")); //try
+
 app.use('/api/v1', routeNav)
 app.use('/admin/api/v1', routeAdmin)
 
